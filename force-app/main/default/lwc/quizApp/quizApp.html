@@ -1,0 +1,68 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card class="slds-var-m-around_medium" title="QUIZZ">
+    <ul class="slds-m-around_medium">
+      <template for:each={questions} for:item="question">
+        <div key={question.id}>
+          <li>{question.id} {question.askedQuestion}</li>
+          <div class="slds-grid slds-gutters">
+            <div>
+              <input
+                type="radio"
+                name={question.id}
+                value="a"
+                style="margin: 15px"
+                onchange={changeHandler}
+              />
+              {question.answerOption.a}
+            </div>
+            <div>
+              <input
+                type="radio"
+                name={question.id}
+                value="b"
+                style="margin: 15px"
+                onchange={changeHandler}
+              />
+              {question.answerOption.b}
+            </div>
+            <div>
+              <input
+                type="radio"
+                name={question.id}
+                value="c"
+                style="margin: 15px"
+                onchange={changeHandler}
+              />
+              {question.answerOption.c}
+            </div>
+          </div>
+        </div>
+      </template>
+    </ul>
+
+    <lightning-button
+      variant="brand"
+      label="Submit"
+      title="Primary action"
+      onclick={submitHandler}
+      class="slds-m-left_x-small"
+      disabled={notAllSelected}
+    ></lightning-button>
+
+    <lightning-button
+      variant="brand"
+      label="Reset"
+      title="Primary action"
+      onclick={resetHandler}
+      class="slds-m-left_x-small"
+    ></lightning-button>
+
+    <div class="slds-card" if:true={isSelected}>
+      <div class="slds-p-around_medium">
+        Correct Answer {correctAnswer} out of {questions.length}
+      </div>
+    </div>
+  </lightning-card>
+</template>
