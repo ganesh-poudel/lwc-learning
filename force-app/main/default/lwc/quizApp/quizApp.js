@@ -5,6 +5,7 @@ export default class QuizApp extends LightningElement {
   correctAnswer = 0;
   isSelected = false;
 
+
   questions = [
     {
       id: 1,
