@@ -1,0 +1,15 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card title="QuerySelector">
+    <div style="margin-left: 30px">
+      <h1>Hello I am Heading 1</h1>
+      <button onclick={fetchHandler}>Fetch Details</button>
+      <template for:each={userNames} for:item="userName">
+        <div class="userId" key={userName}>I am {userName}</div>
+      </template>
+      <div class="child" lwc:dom ='manual'></div>
+      <button onclick={fetchHandlerAllUser}>see all user</button>
+    </div>
+  </lightning-card>
+</template>
