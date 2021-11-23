@@ -1,0 +1,8 @@
+.ext {
+  color: orangered;
+}
+
+.exeet:hover {
+  font-style: italic;
+  color: blue;
+}
