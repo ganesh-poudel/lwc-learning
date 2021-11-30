@@ -1,0 +1,28 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card title="Component Lifecycle Hooks">
+    <div class="slds-var-m-around_medium" style="color: darkslateblue">
+      <strong>1. Introduction to lifecycle hooks</strong> <br />
+      <strong>2. Lifecycle hooks in mounting phase</strong><br />
+      <strong>3. Lifecycle hooks in unmounting phase</strong><br />
+      <strong>4. Lifecycle hooks in error phase</strong><br />
+      <strong>5. Render method</strong><br />
+    </div>
+  </lightning-card>
+  <lightning-card title="Lifecycle hook parent card">
+    <div class="slds-var-m-around_medium">I am a Parent</div>
+    <div class="slds-var-m-around_medium">
+      <input type="text" onkeyup={changeHandler} />
+      <div class="slds-var-m-around_medium">{name}</div>
+      <lightning-button
+        label={label}
+        title="Non-primary action"
+        onclick={handleClick}
+        class="slds-m-left_x-small"
+      ></lightning-button>
+    </div>
+    <template if:true={isDisplay}>
+      <c-life-cycle-child></c-life-cycle-child>
+    </template>
+  </lightning-card>
+</template>

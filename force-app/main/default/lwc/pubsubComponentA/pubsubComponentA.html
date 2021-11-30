@@ -1,0 +1,24 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card title="Pubsub Component A">
+ <!--    <lightning-input
+      type="text"
+      label="Enter some text"
+      class="eleInput slds-m-left_x-small slds-m-bottom_x-small"
+    ></lightning-input> -->
+    <input
+      type="text"
+      class="eleInput"
+      value="Zero To Hero "
+      onkeyup={inputHandler}
+    />
+    <lightning-button
+      variant="success"
+      label="publish"
+      title="Successful action"
+      onclick={buttonHandler}
+      class="slds-m-left_x-small"
+    ></lightning-button>
+  </lightning-card>
+</template>
