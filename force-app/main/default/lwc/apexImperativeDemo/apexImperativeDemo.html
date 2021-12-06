@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Apex Imperative Demo Method">
+    <lightning-button
+      class="slds-m-left_x-small"
+      variant="brand"
+      label="call accound method"
+      value=""
+      onclick={clickHandle}
+    ></lightning-button>
+    <template for:each={accounts} for:item="account">
+      <div class="slds-p-around_medium" key={account.id}>
+        <p><strong>Name : </strong> {account.Name}</p>
+      </div>
+    </template>
+  </lightning-card>
+</template>
